@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask App</title>
+</head>
+<body>
+    <form action="/calculate" method="post">
+        <label for="level">Level:</label>
+        <select id="level" name="level">
+            <option value="Level 2">Level 2</option>
+            <option value="Level 3">Level 3</option>
+            <option value="Level 4">Level 4</option>
+        </select>
+        <br>
+
+        <label for="zone">Zone:</label>
+        <select id="zone" name="zone">
+            <option value="Zone 1">Zone 1</option>
+            <option value="Zone 2">Zone 2</option>
+            <option value="Zone 3">Zone 3</option>
+        </select>
+        <br>
+
+        <label for="wallet">Wallet:</label>
+        <input type="text" id="wallet" name="wallet">
+        <br>
+
+        <button id="calculate" type="submit">Calculate</button>
+    </form>
+
+    <div id="result">
+        {% if result %}
+            <h3>Result:</h3>
+            <p>{{ result }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
